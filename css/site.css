@@ -1,0 +1,250 @@
+:root {
+  color: #111;
+  background: #fff;
+  font-family: system-ui, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrap {
+  width: min(880px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+  padding: 1.75rem 0;
+}
+
+.wordmark {
+  flex: 0 0 auto;
+}
+
+.wordmark img {
+  display: block;
+  height: 28px;
+  width: auto;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem 1.15rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.discord {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  text-decoration: none;
+}
+
+.discord img {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+.discord:hover img {
+  opacity: 0.55;
+}
+
+.site-nav a.discord:hover {
+  text-decoration: none;
+}
+
+main {
+  padding: 2.5rem 0 1rem;
+}
+
+.mark-break {
+  display: flex;
+  justify-content: center;
+  width: min(880px, calc(100% - 3rem));
+  margin: 3rem auto 2rem;
+}
+
+.mark-break img {
+  width: 5.5rem;
+  height: auto;
+}
+
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+h2 {
+  margin: 0 0 0.4rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 0;
+  font-size: 1.125rem;
+}
+
+.lede + .lede {
+  margin-top: 1rem;
+}
+
+.stack p {
+  margin: 0;
+}
+
+.steam-card {
+  display: block;
+  width: min(100%, 460px);
+  margin-top: 0.85rem;
+  background: #171a21;
+  color: #66c0f4;
+  text-decoration: none;
+}
+
+.steam-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.steam-card-copy {
+  display: block;
+  padding: 0.9rem 0.95rem 0.15rem;
+  color: #c6d4df;
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.steam-card-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.75rem;
+  padding: 0.7rem 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.steam-card svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+.steam-card:hover .steam-card-bar {
+  color: #fff;
+}
+
+.stack {
+  display: grid;
+  gap: 2.75rem;
+  margin-top: 2.5rem;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.05rem;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #333;
+}
+
+.facts {
+  display: grid;
+  gap: 0.55rem;
+  margin: 2rem 0 0;
+}
+
+.facts div {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 1rem;
+}
+
+.facts dt,
+.facts dd {
+  margin: 0;
+}
+
+.facts dt {
+  font-weight: 600;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 0 3rem;
+  font-size: 0.95rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+a:focus-visible,
+.button:focus-visible {
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .site-header,
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-nav {
+    justify-content: flex-start;
+  }
+
+  .facts div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
