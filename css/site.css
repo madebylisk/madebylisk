@@ -271,7 +271,7 @@ h2 {
 }
 
 .site-footer p {
-  margin: 0;
+  margin: 0 0 0 auto;
 }
 
 a:focus-visible {
